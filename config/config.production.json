@@ -1,0 +1,5 @@
+{
+    "database_url": "jdbc:mysql://localhost:3306/prod_db",
+    "username": "prod_user",
+    "password": "prod_pass"
+}
