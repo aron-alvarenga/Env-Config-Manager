@@ -14,7 +14,7 @@ Env-Config-Manager é um aplicativo Java simples que carrega e gerencia configur
 
 ## Estrutura do Projeto
 
-EnvConfigManager/<br>
+Env-Config-Manager/<br>
 ├── src/<br>
 │ └── main/<br>
 │ └── java/<br>
