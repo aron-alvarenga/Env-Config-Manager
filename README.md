@@ -13,23 +13,23 @@ Env-Config-Manager é um aplicativo Java simples que carrega e gerencia configur
 - Simplicidade e facilidade de uso.
 
 ## Estrutura do Projeto
-
-Env-Config-Manager/<br>
-├── src/<br>
-│ └── main/<br>
-│ └── java/<br>
-│ └── com/<br>
-│ └── example/<br>
-│ └── MyApp/<br>
-│ ├── Config.java<br>
-│ └── Main.java<br>
-├── config/<br>
-│ ├── config.development.json<br>
-│ └── config.production.json<br>
-├── .env<br>
-├── .gitignore<br>
-└── pom.xml<br>
-
+```
+Env-Config-Manager/
+├── src/
+│ └── main/
+│ └── java/
+│ └── com/
+│ └── example/
+│ └── MyApp/
+│ ├── Config.java
+│ └── Main.java
+├── config/
+│ ├── config.development.json
+│ └── config.production.json
+├── .env
+├── .gitignore
+└── pom.xml
+```
 
 ## Pré-requisitos
 
