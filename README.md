@@ -1,7 +1,7 @@
 # Env-Config-Manager
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Java](https://img.shields.io/badge/Java-11%2B-blue.svg)](https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html)
+[![Java](https://img.shields.io/badge/Java-21-blue.svg)](https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html)
 
 Env-Config-Manager é um aplicativo Java simples que carrega e gerencia configurações de diferentes ambientes (desenvolvimento e produção) usando arquivos JSON. Este projeto visa facilitar a separação de configurações específicas do ambiente para desenvolvedores.
 
@@ -26,14 +26,14 @@ Env-Config-Manager/
 ├── config/
 │ ├── config.development.json
 │ └── config.production.json
-├── .env
+├── .env.example
 ├── .gitignore
 └── pom.xml
 ```
 
 ## Pré-requisitos
 
-- Java 11 ou superior
+- Java 21 ou superior
 - Maven
 
 ## Instalação
@@ -47,13 +47,26 @@ Env-Config-Manager/
 
 2. Configure o ambiente:
 
-    No arquivo `.env` na raiz do projeto, defina o ambiente:
+    Copie o arquivo `.env.example` para `.env`:
+
+    ```sh
+    cp .env.example .env
+    ```
+
+    No Windows PowerShell:
+    ```powershell
+    Copy-Item .env.example .env
+    ```
+
+    Edite o arquivo `.env` e defina o ambiente desejado:
 
     ```env
     ENV=development
     ```
 
     Você pode mudar o valor para `production` quando necessário.
+
+    **Nota:** O arquivo `.env` não é versionado no Git por questões de segurança. Use o `.env.example` como template.
 
 3. Adicione as configurações de ambiente nos arquivos JSON no diretório `config/`:
 
@@ -70,11 +83,19 @@ Env-Config-Manager/
 
 2. Execute o projeto:
 
+    O projeto está configurado com o plugin `exec-maven-plugin`, então você pode executar simplesmente com:
+
     ```sh
-    mvn exec:java -Dexec.mainClass="Main"
+    mvn exec:java
     ```
 
-    A saída mostrará as configurações de acordo com o ambiente definido.
+    **Nota para PowerShell (Windows):** Se preferir usar o comando completo, use aspas simples:
+
+    ```powershell
+    mvn exec:java -Dexec.mainClass='Main'
+    ```
+
+    A saída mostrará as configurações de acordo com o ambiente definido no arquivo `.env`.
 
 ## Contribuição
 
