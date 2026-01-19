@@ -97,6 +97,14 @@ Env-Config-Manager/
 
     A saída mostrará as configurações de acordo com o ambiente definido no arquivo `.env`.
 
+## Novo Direcionamento
+
+* Hoje é “utilitário simples”. Transformar em **biblioteca/CLI** reutilizável:
+  * **Camadas**: loader, validator, resolver (env vars/overrides), output.
+  * **Validação de schema** (ex.: JSON Schema) e mensagens de erro decentes.
+  * **Segurança**: evitar imprimir secrets, suporte a `.env` + variáveis do sistema.
+  * **Packaging**: virar um jar executável e/ou lib publicada (mesmo que só em GitHub Packages).
+
 ## Contribuição
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests para melhorar este projeto.
